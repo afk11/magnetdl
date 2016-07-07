@@ -1,0 +1,23 @@
+{
+  "name": "afk11/magnetdl",
+  "license": "MIT",
+  "type": "application",
+  "description": "Download magnet url's using a local Transmission Daemon, and upload using sftp",
+  "keywords": ["torrent","magnet","link","download","sftp","transmission","daemon"],
+  "bin": [
+    "bin/magnetdl",
+    "bin/magnetdlconfig"
+  ],
+  "require": {
+    "kleiram/transmission-php": "1.0.0",
+    "symfony/console": "3.1.*",
+    "react/event-loop": "0.4",
+    "evenement/evenement": "^2.0|^1.0"
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Torrentz\\": "src/"
+    }
+  }
+}

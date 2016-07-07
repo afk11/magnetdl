@@ -1,0 +1,16 @@
+#!/usr/bin/env php
+<?php
+
+$c = [
+    'sftp_identityfile' => '/home/user/.ssh/id_rsa',
+    'sftp_host' => '10.101.23.24',
+    'sftp_user' => 'loginuser',
+    'dir_local' => '/var/lib/transmission-daemon/downloads/',
+    'dir_remote' => '/mnt/shared/'
+    'transmission_rpc_host' => '127.0.0.1',
+    'transmission_rpc_port' => '9091',
+    'transmission_rpc_user' => 'rpcuser',
+    'transmission_rpc_pass' => 'rpcpass',
+];
+
+echo json_encode($c, JSON_PRETTY_PRINT) . PHP_EOL;

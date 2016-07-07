@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+
+require_once "../vendor/autoload.php";
+
+if (!isset($argv[1])) {
+    die('Please provide a magnet url' . PHP_EOL);
+}
+
+$json = file_get_contents(getenv('HOME') . "/.magnetdl/config.json");
+$config = json_decode($json, true);
+
+$params = new \Torrentz\Params($config);
+
+new \Torrentz\Routine($params, $argv[1]);
